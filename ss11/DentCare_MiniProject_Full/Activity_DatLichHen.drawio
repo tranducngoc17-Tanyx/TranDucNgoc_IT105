@@ -1,0 +1,32 @@
+<mxfile host="app.diagrams.net" agent="claude">
+  <diagram name="Activity Diagram - Dat lich hen" id="Activity_Diagram_-_Dat_lich_hen">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="460" y="40" width="30" height="30" as="geometry" /></mxCell>
+        <mxCell id="n3" value="Bệnh nhân yêu cầu đặt lịch hẹn" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="360" y="110" width="220" height="50" as="geometry" /></mxCell>
+        <mxCell id="n4" value="Lễ tân kiểm tra lịch trống" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="360" y="200" width="220" height="50" as="geometry" /></mxCell>
+        <mxCell id="n5" value="Còn trống?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1"><mxGeometry x="380" y="290" width="180" height="70" as="geometry" /></mxCell>
+        <mxCell id="n6" value="Tạo lịch hẹn&#10;(trạng thái: Chờ xác nhận)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="620" y="300" width="220" height="60" as="geometry" /></mxCell>
+        <mxCell id="n7" value="Gửi xác nhận cho bệnh nhân" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="620" y="400" width="220" height="50" as="geometry" /></mxCell>
+        <mxCell id="n8" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;shape=doubleEllipse;" vertex="1" parent="1"><mxGeometry x="700" y="480" width="30" height="30" as="geometry" /></mxCell>
+        <mxCell id="n9" value="Đề xuất khung giờ khác" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="130" y="300" width="210" height="50" as="geometry" /></mxCell>
+        <mxCell id="n10" value="Bệnh nhân&#10;đồng ý?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1"><mxGeometry x="150" y="400" width="170" height="70" as="geometry" /></mxCell>
+        <mxCell id="n11" value="Kết thúc, không đặt lịch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="130" y="520" width="220" height="50" as="geometry" /></mxCell>
+        <mxCell id="n12" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;shape=doubleEllipse;" vertex="1" parent="1"><mxGeometry x="210" y="600" width="30" height="30" as="geometry" /></mxCell>
+        <mxCell id="n13" value="" style="endArrow=block;html=1;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="n2" target="n3"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="n14" value="" style="endArrow=block;html=1;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="n3" target="n4"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="n15" value="" style="endArrow=block;html=1;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="n4" target="n5"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="n16" value="[Còn trống]" style="endArrow=block;html=1;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="n5" target="n6"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="n17" value="" style="endArrow=block;html=1;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="n6" target="n7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="n18" value="" style="endArrow=block;html=1;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="n7" target="n8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="n19" value="[Không trống]" style="endArrow=block;html=1;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="n5" target="n9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="n20" value="" style="endArrow=block;html=1;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="n9" target="n10"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="n21" value="[Đồng ý]" style="endArrow=block;html=1;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="n10" target="n6"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="240" y="350" /><mxPoint x="500" y="330" /></Array></mxGeometry></mxCell>
+        <mxCell id="n22" value="[Không đồng ý]" style="endArrow=block;html=1;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="n10" target="n11"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="n23" value="" style="endArrow=block;html=1;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="n11" target="n12"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
