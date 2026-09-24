@@ -1,0 +1,142 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0">
+  <diagram id="SeqDiagramDelivery" name="UC-DELIVERY-01">
+    <mxGraphModel dx="1641" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="actor_top" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Tài xế" vertex="1">
+          <mxGeometry height="60" width="30" x="60" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_line" edge="1" parent="1" source="actor_top" style="endArrow=none;dashed=1;html=1;strokeWidth=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="75" y="110" as="sourcePoint" />
+            <mxPoint x="75" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="actor_bottom" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Tài xế" vertex="1">
+          <mxGeometry height="60" width="30" x="60" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="pres_top" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="ShipperApp&#xa;(Presentation Tier)" vertex="1">
+          <mxGeometry height="50" width="140" x="200" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pres_line" edge="1" parent="1" source="pres_top" style="endArrow=none;dashed=1;html=1;strokeWidth=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="270" y="110" as="sourcePoint" />
+            <mxPoint x="270" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pres_bottom" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="ShipperApp&#xa;(Presentation Tier)" vertex="1">
+          <mxGeometry height="50" width="140" x="200" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="biz_top" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="DeliveryService&#xa;(Business Logic Tier)" vertex="1">
+          <mxGeometry height="50" width="160" x="460" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="biz_line" edge="1" parent="1" source="biz_top" style="endArrow=none;dashed=1;html=1;strokeWidth=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="540" y="110" as="sourcePoint" />
+            <mxPoint x="540" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="biz_bottom" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="DeliveryService&#xa;(Business Logic Tier)" vertex="1">
+          <mxGeometry height="50" width="160" x="460" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="data_top" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="PackageRepository&#xa;(Data Tier)" vertex="1">
+          <mxGeometry height="50" width="150" x="740" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="data_line" edge="1" parent="1" source="data_top" style="endArrow=none;dashed=1;html=1;strokeWidth=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="815" y="110" as="sourcePoint" />
+            <mxPoint x="815" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="data_bottom" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="PackageRepository&#xa;(Data Tier)" vertex="1">
+          <mxGeometry height="50" width="150" x="740" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_1" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" value="1. Cập nhật kết quả giao (kèm ảnh/lý do nếu có)">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="75" y="140" as="sourcePoint" />
+            <mxPoint x="270" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_2" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" value="2. HTTP POST /deliveries/confirm (DTO + GPS)">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="270" y="170" as="sourcePoint" />
+            <mxPoint x="540" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="proc_note" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Kiểm tra GPS, đối soát COD &amp; xác định trạng thái" vertex="1">
+          <mxGeometry height="30" width="160" x="460" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="alt_box" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;width=60;height=25;fillColor=none;strokeColor=#333333;" value="alt" vertex="1">
+          <mxGeometry height="370" width="730" x="150" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="cond_happy" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontStyle=2;fontSize=11;" value="[Giao thành công: COD &amp; GPS hợp lệ]" vertex="1">
+          <mxGeometry height="20" width="280" x="220" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_3a" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" value="3a. UPDATE Package SET Status=&#39;DELIVERED&#39;, CodAmount=...">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint" />
+            <mxPoint x="815" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_4a" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" value="Ghi nhận thành công">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="815" y="310" as="sourcePoint" />
+            <mxPoint x="540" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_5a" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" value="200 OK (Thành công)">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="540" y="340" as="sourcePoint" />
+            <mxPoint x="270" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_6a" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" value="6a. Hiển thị giao hàng thành công">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="270" y="360" as="sourcePoint" />
+            <mxPoint x="75" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="alt_separator" edge="1" parent="1" style="line;strokeWidth=1;dashed=1;labelBackgroundColor=none;fillColor=none;align=left;verticalAlign=middle;" value="">
+          <mxGeometry relative="1" width="730" as="geometry">
+            <mxPoint x="150" y="400" as="sourcePoint" />
+            <mxPoint x="880" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cond_alt" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontStyle=2;fontSize=11;" value="[Khách từ chối nhận / Vắng nhà]" vertex="1">
+          <mxGeometry height="20" width="280" x="220" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_3b" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" value="3b. UPDATE Package SET Status=&#39;FAILED_ATTEMPT_1&#39;, Reason=...; Lập lịch giao lần 2">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="540" y="445" as="sourcePoint" />
+            <mxPoint x="815" y="445" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_4b" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" value="Ghi nhận thất bại &amp; lưu lịch mới">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="815" y="480" as="sourcePoint" />
+            <mxPoint x="540" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_5b" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" value="200 OK (Ghi nhận thất bại &amp; lịch hẹn giao lại)">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="540" y="520" as="sourcePoint" />
+            <mxPoint x="270" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_6b" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" value="6b. Hiển thị thông báo giao thất bại &amp; hẹn giao lại">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="270" y="550" as="sourcePoint" />
+            <mxPoint x="75" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wUOGmYRkM_698ukhXX9w-1" edge="1" parent="1" source="alt_box" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.405;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.996;entryY=0.436;entryDx=0;entryDy=0;entryPerimeter=0;" target="alt_box" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="560" y="410" as="sourcePoint" />
+            <mxPoint x="610" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
